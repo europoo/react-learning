@@ -28,3 +28,17 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+## Linking component library
+
+In the `vite-react-lib` run `npm pack` then `npm link`
+
+Navigate to `vite-react-app` and run `npm link <lib name>` (the name in the package.json file). In this case it's `npm link vite-react-lib`
+
+Import the components like so:
+
+`import { <component name> } from 'vite-react-lib'`
+
+Now you can use the library components in the app
+
